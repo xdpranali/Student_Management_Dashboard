@@ -1,0 +1,272 @@
+/* Basic reset and typography */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f0f4f8;
+  color: #222;
+}
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: #5134c5;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+footer {
+  border-radius: 0 0 10px 10px;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+  background: transparent;
+  box-shadow: none;
+}
+
+h1,
+h2 {
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Search input (optional feature) */
+.search-container {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.search-container input:focus {
+  border-color: #5134c5;
+  outline: none;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1 1 320px;
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(30, 64, 175, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-section:hover {
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.25);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+input,
+select {
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.4rem;
+  border: 1.8px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  color: #1e293b;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:focus,
+select:focus {
+  border-color: #5134c5;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 64, 175, 0.5);
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  background: #5134c5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="button"] {
+  background: #64748b;
+  margin-left: 0.75rem;
+}
+
+button:hover {
+  background: #1e3aaf;
+  box-shadow: 0 4px 12px rgba(30, 58, 175, 0.4);
+}
+
+button[type="button"]:hover {
+  background: #475569;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.3rem;
+  font-weight: 600;
+}
+
+/* List Section */
+.list-section {
+  flex: 2 1 600px;
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(30, 64, 175, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.list-section:hover {
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.25);
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.student-card {
+  display: flex;
+  gap: 1rem;
+  background: #e0e7ff;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.15);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.student-card:hover {
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.3);
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #1e40af;
+  flex-shrink: 0;
+}
+
+.student-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+.student-info p {
+  margin: 0.15rem 0;
+  color: #334155;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.student-info h3 {
+  margin: 0 0 0.3rem 0;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.student-info button {
+  margin-top: 0.6rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.95rem;
+  background: #2563eb;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.student-info button:hover {
+  background: #1d4ed8;
+}
+
+/* Delete button on student card */
+.student-card .delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ef4444;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.student-card .delete-btn:hover {
+  background: #b91c1c;
+}
+
+
+/* Responsive */
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .list-section {
+    flex: 1 1 100%;
+  }
+}
