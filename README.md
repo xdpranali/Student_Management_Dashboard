@@ -6,6 +6,13 @@ It demonstrates **React fundamentals, async/await, event loop behavior, and resp
 
 ---
 
+##  Live Demo
+
+Access the live demo here:  
+[🎬 Student Management Dashboard – Live on Vercel](https://student-management-dashboard-two.vercel.app/)
+
+---
+
 ## 🚀 Features
 
 - **Add Students** – via a form with validation (name, email, course, optional profile image).
